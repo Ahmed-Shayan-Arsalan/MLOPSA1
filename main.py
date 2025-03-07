@@ -6,7 +6,7 @@ from sklearn.metrics import accuracy_score
 import joblib
 
 def train_model():
-    df = pd.read_csv('Iris.csv')
+    df = pd.read_csv('iris.csv')
     X = df[['SepalLengthCm', 'SepalWidthCm', 'PetalLengthCm', 'PetalWidthCm']]
     y = df['Species']
 
