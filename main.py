@@ -6,7 +6,7 @@ from sklearn.metrics import accuracy_score
 import joblib
 
 def train_model():
-    df = pd.read_csv('Iris.csv')
+    df = pd.read_csv('iris.csv')
     X = df[['SepalLengthCm', 'SepalWidthCm', 'PetalLengthCm', 'PetalWidthCm']]
     y = df['Species']
 
@@ -22,7 +22,7 @@ def train_model():
 
     y_pred = model.predict(X_test)
     accuracy = accuracy_score(y_test, y_pred)
-    print(f"Trained model with accuracy= {accuracy:.2f}")
+    print(f"Trained model with accuracy is = {accuracy:.2f}")
 
 if __name__ == "__main__":
     train_model()
