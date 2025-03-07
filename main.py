@@ -22,7 +22,7 @@ def train_model():
 
     y_pred = model.predict(X_test)
     accuracy = accuracy_score(y_test, y_pred)
-    print(f"Trained model with accuracy is this = {accuracy:.2f}")
+    print(f"Trained model with accuracy is = {accuracy:.2f}")
 
 if __name__ == "__main__":
     train_model()
