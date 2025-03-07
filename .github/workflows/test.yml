@@ -23,6 +23,7 @@ jobs:
           pip install -r requirements.txt
           # Explicitly install pytest here:
           pip install pytest
+          pip install numpy
 
       - name: Run tests
         run: |
