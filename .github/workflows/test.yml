@@ -2,7 +2,8 @@ name: Run Tests
 
 on:
   pull_request:
-    branches: [ "test" ]  # triggers when there's a PR INTO the 'test' branch
+    branches: [ "test" ]
+    # This means the workflow will run whenever a Pull Request targets the 'test' branch.
 
 jobs:
   build-and-test:
@@ -20,13 +21,10 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          # If you need additional packages for testing:
-          # pip install pytest joblib
+          # Explicitly install pytest here:
+          pip install pytest
 
       - name: Run tests
         run: |
-          # Option 1: If you're using unittest:
-          # python -m unittest discover
-
-          # Option 2: If you're using pytest:
+          # Run pytest in the 'test' folder (or adjust as needed)
           pytest test
