@@ -2,17 +2,15 @@
 
 FROM python:3.8-slim
 
-# Set the working directory
 WORKDIR /app
 
-# Copy your code into the container
+# Copy the project files
 COPY . /app
 
-# Install dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+# Install dependencies with an increased timeout (e.g., 120 seconds)
+RUN pip install --default-timeout=120 --no-cache-dir -r requirements.txt
 
-# (Optional) Expose a port if your app runs a server
+# Optionally expose a port (if needed)
 # EXPOSE 5000
 
-# Default command
 CMD ["python", "main.py"]
