@@ -26,7 +26,7 @@ class TestIrisModel(unittest.TestCase):
         
         # Predict and check result
         prediction = model.predict(test_input)[0]
-        self.assertEqual(prediction, expected_output, "Hardcoded test prediction did not match.")
+        self.assertEqual(prediction, expected_output, "Hardcoded tests prediction did not match.")
 
 if __name__ == '__main__':
     unittest.main()
