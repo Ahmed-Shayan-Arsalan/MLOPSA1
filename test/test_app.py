@@ -7,7 +7,7 @@ class TestIrisModel(unittest.TestCase):
     def test_hardcoded_prediction(self):
         # Construct the path to Iris.csv in the same folder as test_app.py
         base_dir = os.path.dirname(os.path.abspath(__file__))
-        iris_path = os.path.join(base_dir, 'Iris.csv')
+        iris_path = os.path.join(base_dir, 'iris.csv')
         
         # Load the CSV using the constructed path
         df = pd.read_csv(iris_path)
